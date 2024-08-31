@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: rails-mobi-web
+    name: rails-mobi
     env: ruby
     plan: free
     numInstances: 1
@@ -9,13 +9,11 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: rails-mobi-db
-          property: connectionString 
+          name: rails-mobi
+          property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-
-
 databases:
-  - name: rails-mobi-db
+  - name: rails-mobi
     plan: free
-    postgresMajorVersion: 14
+    postgresMajorVersion: '14'
