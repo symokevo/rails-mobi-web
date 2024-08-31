@@ -80,7 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: rails_mobi_production
-  username: rails_mobi
-  password: <%= ENV['RAILS_MOBI_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
